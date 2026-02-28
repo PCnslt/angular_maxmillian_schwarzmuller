@@ -7,9 +7,14 @@ import {Component, Input, Output, EventEmitter, computed, input} from '@angular/
 })
 export class UserComponent{
 
-    @Input() id!: string;
-    @Input() avatar!: string;
-    @Input() name!: string;
+    // @Input() id!: string;
+    // @Input() avatar!: string;
+    // @Input() name!: string;
+    @Input() user!: {
+        id: string;
+        avatar: string;
+        name: string;
+    };
     @Output() select = new EventEmitter();
 
     // avatar = input.required<string>();
@@ -20,11 +25,11 @@ export class UserComponent{
     // });
 
     get imagePath(){
-        return 'assets/users/'+this.avatar;
+        return 'assets/users/'+this.user.avatar;
     }
 
     onSelectUser(id: string){
-        this.select.emit(this.id);
+        this.select.emit(this.user.id);
     }
 
 }
