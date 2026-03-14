@@ -1,4 +1,10 @@
 import {Component, Input, Output, EventEmitter, computed, input} from '@angular/core'
+import {type User} from "./user.model"
+// interface User{
+//         id: string;
+//         avatar: string;
+//         name: string;
+//     }
 @Component({
     selector: 'app-user',
     standalone: true,
@@ -7,22 +13,9 @@ import {Component, Input, Output, EventEmitter, computed, input} from '@angular/
 })
 export class UserComponent{
 
-    // @Input() id!: string;
-    // @Input() avatar!: string;
-    // @Input() name!: string;
-    @Input() user!: {
-        id: string;
-        avatar: string;
-        name: string;
-    };
+
+    @Input() user!: User;
     @Output() select = new EventEmitter();
-
-    // avatar = input.required<string>();
-    // name = input.required<string>();
-
-    // imagePath = computed(()->{
-    //     return 'assets/users/'+this.avatar;
-    // });
 
     get imagePath(){
         return 'assets/users/'+this.user.avatar;
