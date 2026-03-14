@@ -26,22 +26,22 @@ get selectedUserTasks(){
   return this.tasksService.getUserTasks(this.userId);
 }
 
-onCompleteTask(id: string){
+// onCompleteTask(id: string){
  
-}
+// }
 
 onStartAddTask(){
   this.isAddingTask = true;
 }
 
-onCancelAddTask(){
+onCloseAddTask(){
   this.isAddingTask = false;
 }
 
-onAddTask(taskData: NewTaskData){
+// onAddTask(taskData: NewTaskData){
   
 
-  this.isAddingTask= false;
-}
+//   this.isAddingTask= false;
+// }
 
 }
