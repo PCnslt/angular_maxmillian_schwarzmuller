@@ -1,5 +1,5 @@
 <div>
-    <button (click)="onSelectUser(user.id)" >
+    <button [class.active]="selected" (click)="onSelectUser(user.id)" >
         <!-- <img src="{{ selectedUser.avatar}}"/> -->
          <!-- <img [src]="'assets/users/'+selectedUser.avatar"  -->
           <img [src] = "imagePath"
