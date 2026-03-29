@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'button[appButton]',
+  selector: 'button[appButton], a[appButton]',
   standalone: true,
   imports: [],
   templateUrl: './button.component.html',
@@ -9,7 +9,7 @@ import { Component, Input } from '@angular/core';
 })
 export class ButtonComponent {
 
-  @Input({required:false}) logout!:string
+  // @Input({required:false}) logout!:string
 
 
 }
