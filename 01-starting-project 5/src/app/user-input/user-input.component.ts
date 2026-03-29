@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output, signal } from "@angular/core";
+import { Component, EventEmitter, output, Output, signal } from "@angular/core";
 import { FormsModule } from "@angular/forms";
 import { InvestmentInput } from "./investment-input.model";
 
